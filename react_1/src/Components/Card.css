@@ -1,0 +1,19 @@
+.card {
+    border: solid black 3px;
+    margin: 20 px;
+    padding: 25px;
+    background-color: bisque;
+}
+
+h1 {
+   color: turquoise; 
+}
+
+
+p {
+    color: red
+}
+
+img {
+    border-radius: 50%;
+}
