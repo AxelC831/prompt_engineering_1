@@ -1,4 +1,4 @@
-import "./card.css";
+import "./Card.css";
 
 function Heading() {
   return <h1>My Website</h1>;
