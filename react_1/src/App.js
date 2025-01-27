@@ -1,24 +1,26 @@
 import "./styles.css"
-import Card from "./Components/Card"
+import Card from "./Components/Card";
 import { useState } from "react";
 
 export default function App()   {
- let [upvote, setUpvote] = useState(0);
+ const [upvote, setUpvote] = useState(0);
 
  function like() {
-return setUpvote((upvote += 1));
+setUpvote (upvote + 1);
  }
+ const name = "Axel";
+  
  return (
    <div className="App">
       {upvote}
-      <button onClick={like}>👍🏼👍🏼</button>
+      <button onClick={like}>👍🏼</button>
    <Card
          Name="Axel"
          Age= "17"
    />
    <Card
          Name="Camila"
-         Age= "17" pics
+         Age= "17" 
    />
    <Card
          Name="Evangelina"

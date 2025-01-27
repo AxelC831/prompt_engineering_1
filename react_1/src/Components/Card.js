@@ -1,17 +1,20 @@
-import "./Card.css";
+function Heading() {
+    return <h1>My website </h1>;
+}
 
 
 
-function Card({Name, Age})  {
+
+function Card(props )  {
 return (
 
-    <div className="card">
-        <img src= "https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FSunrise&psig=AOvVaw2yMvojFjubW4jpmnGLuEzb&ust=1733435776949000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCNC9kdCNj4oDFQAAAAAdAAAAABAE" alt="sunrise"
-        width="200px"/>
-        <h1>(Name)</h1>
-        <p>  {Age} </p>
+    <div className="imagemy-style">
+        {}
+        <h2>{props.name}</h2>
+        <img src="TOMMY.webp" alt="avatar_img" />
+        <p> {props.tel} </p>
+        <p>{props.email}</p>
     </div>
-    )
-;}
+    );
+}
 
-export default Card;
