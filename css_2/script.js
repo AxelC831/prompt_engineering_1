@@ -20,9 +20,9 @@ function showMessageAndLog(message) {
 }
 
 // 3. Alert message when the page loads
-window.onload = function() {
-    alert("Hello, this is my website!!");
-};
+// window.onload = function() {
+//     alert("Hello, this is my website!!");
+// };
 
 // 4. Modify the Webpage for Interaction
 // Finding elements by ID, class name, and tag name
