@@ -5,8 +5,9 @@ export default function App() {
   const [upvote, setUpvote] = useState(0);
 
   function like() {
-    setUpvote(upvote + 1);
+    setUpvote((prevUpvote) => prevUpvote + 1);
   }
+  
 
   return (
     <div className="App">
@@ -19,4 +20,4 @@ export default function App() {
       <Card Name="Daniel" Age="16" />
     </div>
   );
-}
+}      
