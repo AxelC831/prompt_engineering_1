@@ -1,16 +1,8 @@
-import "./Card.css";
-
-function Heading() {
-  return <h1>My Website</h1>;
-}
-
-function Card(props) {
+function Card({ Name, Age }) {
   return (
     <div className="card">
-      <Heading />
-      <h2>{props.Name}</h2>
-      <img src="TOMMY.webp" alt="avatar_img" />
-      <p>Age: {props.Age}</p>
+      <h2>{Name}</h2>
+      <p>Age: {Age}</p>
     </div>
   );
 }
