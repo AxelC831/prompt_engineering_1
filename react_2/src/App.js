@@ -1,36 +1,41 @@
-import Card from "./components/Card";
 import { useState } from "react";
+import Card from "./components/Card";
 
 export default function App() {
-  const [upvote, setUpvote] = useState(0);
+  const [likes, setLikes] = useState(0);
   const [people, setPeople] = useState([
-    { Name: "Axel", Age: 17 },
-    { Name: "Camila", Age: 17 },
-    { Name: "Evangelina", Age: 16 },
-    { Name: "Daniel", Age: 16 }
+    { name: "Axel", age: 17 },
+    { name: "Camila", age: 17 },
+    { name: "Evangelina", age: 16 },
+    { name: "Daniel", age: 16 }
   ]);
 
   const [newName, setNewName] = useState("");
   const [newAge, setNewAge] = useState("");
 
-  function like() {
-    setUpvote((prevUpvote) => prevUpvote + 1);
+  function addLike() {
+    setLikes((prevLikes) => prevLikes + 1);
   }
 
   function addPerson(event) {
     event.preventDefault();
-    if (newName && newAge) {
-      setPeople([...people, { Name: newName, Age: newAge }]);
-      setNewName("");
-      setNewAge("");
+    const ageNumber = parseInt(newAge, 10);
+
+    if (!newName.trim() || isNaN(ageNumber) || ageNumber <= 0) {
+      alert("Please enter a valid name and age.");
+      return;
     }
+
+    setPeople([...people, { name: newName.trim(), age: ageNumber }]);
+    setNewName("");
+    setNewAge("");
   }
 
   return (
     <div className="App">
       <h1>Like Counter</h1>
-      <p>{upvote}</p>
-      <button onClick={like}>👍🏼</button>
+      <p>{likes}</p>
+      <button onClick={addLike}>👍🏼</button>
 
       {/* Form to add new people */}
       <h2>Add a Person</h2>
@@ -56,7 +61,7 @@ export default function App() {
         <p>No people added yet.</p>
       ) : (
         people.map((person, index) => (
-          <Card key={index} Name={person.Name} Age={person.Age} />
+          <Card key={index} name={person.name} age={person.age} />
         ))
       )}
     </div>
