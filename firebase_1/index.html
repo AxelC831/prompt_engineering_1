@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Firebase Project</title>
+</head>
+<body>
+
+  <!-- Sign Up -->
+  <h1>Sign Up</h1>
+  <input type="email" id="signup-email" placeholder="Email">
+  <input type="password" id="signup-password" placeholder="Password">
+  <button onclick="signUp()">Sign Up</button>
+
+  <!-- Login -->
+  <h1>Login</h1>
+  <input type="email" id="login-email" placeholder="Email">
+  <input type="password" id="login-password" placeholder="Password">
+  <button onclick="login()">Login</button>
+
+  <!-- Upload File -->
+  <h1>Upload a Picture</h1>
+  <input type="file" id="file-upload">
+  <button onclick="uploadFile()">Upload File</button>
+
+  <!-- Firestore CRUD -->
+  <h1>Firestore CRUD</h1>
+  <input type="text" id="user-id" placeholder="User ID">
+  <input type="text" id="user-name" placeholder="Name">
+  <button onclick="createUser()">Create User</button>
+  <button onclick="readUser()">Read User</button>
+  <button onclick="updateUser()">Update User</button>
+  <button onclick="deleteUser()">Delete User</button>
+
+  <h2 id="message"></h2>
+
+  <!-- Firebase libraries -->
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-storage-compat.js"></script>
+
+  <!-- Your app code -->
+  <script src="app.js"></script>
+
+</body>
+</html>
